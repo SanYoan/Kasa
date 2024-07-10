@@ -1,8 +1,8 @@
 function Rental() {
   return (
-    <div>
+    <main>
       <h1>Location</h1>
-    </div>
+    </main>
   );
 }
 

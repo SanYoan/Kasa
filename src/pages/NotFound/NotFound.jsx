@@ -1,9 +1,14 @@
-function NotFound() {
+import Error from "../../components/Error/Error.jsx";
+
+const NotFound = () => {
+  document.title = "Kasa - Page introuvable";
   return (
-    <div>
-      <h1>Erreur</h1>
-    </div>
+    <>
+      <main>
+        <Error />
+      </main>
+    </>
   );
-}
+};
 
 export default NotFound;

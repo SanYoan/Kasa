@@ -1,0 +1,63 @@
+@import "../../styles/index.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sectionCollapse {
+    width: 90%;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: 0px;
+    }
+}
+
+.collapseButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: $color-orange;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.icon {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+.content.active {
+    max-height: 200px;
+}
+
+.contentCollapse {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+}
+
+.contentCollapse.active {
+    display: block;
+}
