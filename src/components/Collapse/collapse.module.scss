@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 30px;
+    gap: 10px;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -25,15 +25,16 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 10px;
+    padding: 10px 20px 10px 15px;
     background-color: $color-orange;
     border: none;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
     color: white;
     border-radius: 5px;
     box-sizing: border-box;
+    letter-spacing: 1px;
 }
 
 .icon {
@@ -41,23 +42,42 @@
     transition: transform 0.3s ease;
 }
 
+.rotate {
+    transform: rotate(180deg);
+}
+
 .content {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.3s ease;
+    opacity: 0;
+    transition: max-height 0.2s ease, opacity ease 0.3s;
 }
 
 .content.active {
     max-height: 200px;
+    opacity: 1;
+    transition: max-height 0.3s ease, opacity ease 0.3s;
 }
+
 
 .contentCollapse {
     padding: 10px;
     background-color: #fff;
     border-radius: 0 0 5px 5px;
     box-sizing: border-box;
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+    top: -80px;
+    opacity: 0;
+    transition: top ease 0.5s, opacity ease 0.3s;
+
+
 }
 
 .contentCollapse.active {
     display: block;
+    top: 0;
+    opacity: 1;
+    transition: top ease 0.5s, opacity ease 0.3s;
 }

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "../Banner/banner.module.scss";
 
-const Banner = ({ imageUrl, title, opacity, isVisible }) => {
+const Banner = ({ imageUrl, title, opacity = 0.6, isVisible = true }) => {
   const overlayStyle = {
     opacity: opacity,
     background: "black",
@@ -19,7 +19,7 @@ Banner.propTypes = {
   imageUrl: PropTypes.node.isRequired,
   title: PropTypes.node,
   opacity: PropTypes.number,
-  isVisible: PropTypes.bool.isRequired,
+  isVisible: PropTypes.bool,
 };
 
 export default Banner;

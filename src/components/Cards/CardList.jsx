@@ -1,20 +1,19 @@
-import React from "react";
 import datas from "../../datas/logements.json";
-import Createcard from "../Cards/Createcard";
+import CreateCard from "./CreateCard";
 import styles from "../Cards/cards.module.scss";
 
 const CardList = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       {datas.map((datas) => (
-        <Createcard
+        <CreateCard
           key={datas.id}
           id={datas.id}
           title={datas.title}
           cover={datas.cover}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

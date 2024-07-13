@@ -1,3 +1,4 @@
+// Fonction hook perso pour le repli et dépliement du collapse
 import { useState } from "react";
 
 function useCollapse(initialState = true) {

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const Card = ({ title, cover }) => {
   return (
-    <Link to="/rental">
-      <article className={styles.container__card}>
+    <figure className={styles.container__card}>
+      <Link to="/rental">
         {" "}
         <h2 className={styles.card__title}>{title}</h2>
         <img className={styles.card__img} src={cover} alt={title} />
-      </article>
-    </Link>
+      </Link>
+    </figure>
   );
 };
 
