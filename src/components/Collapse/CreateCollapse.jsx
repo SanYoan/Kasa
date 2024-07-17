@@ -19,13 +19,13 @@ const CreateCollapse = ({ title, content }) => {
       </button>
 
       <div className={`${styles.content} ${isCollapsed ? "" : styles.active}`}>
-        <p
+        <div
           className={`${styles.contentCollapse} ${
             isCollapsed ? "" : styles.active
           }`}
         >
           {content}
-        </p>
+        </div>
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ const CreateCollapse = ({ title, content }) => {
 
 CreateCollapse.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
 };
 
 export default CreateCollapse;

@@ -5,14 +5,18 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
     box-sizing: border-box;
 }
 
 .sectionCollapse {
-    width: 90%;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    justify-content: space-between;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -29,12 +33,16 @@
     background-color: $color-orange;
     border: none;
     cursor: pointer;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
     letter-spacing: 1px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .icon {
@@ -72,6 +80,9 @@
     opacity: 0;
     transition: top ease 0.5s, opacity ease 0.3s;
 
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 
 }
 
@@ -80,4 +91,39 @@
     top: 0;
     opacity: 1;
     transition: top ease 0.5s, opacity ease 0.3s;
+}
+
+.containerCollapse {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+// Description location
+
+.containerHostCollapse {
+    display: flex;
+    gap: 75px;
+    margin-top: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.containerHostCollapse.active {
+    display: block;
+    top: 0;
+    opacity: 1;
+    transition: top ease 0.5s, opacity ease 0.3s;
+}
+
+
+.equipmentIcon {
+    color: $color-orange;
+    margin-right: 10px;
 }

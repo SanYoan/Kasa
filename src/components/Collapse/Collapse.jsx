@@ -5,7 +5,11 @@ const Collapse = ({ datas }) => {
   return (
     <section className={styles.container}>
       {datas.map((data, index) => (
-        <CreateCollapse key={index} title={data.title} content={data.content} />
+        <CreateCollapse
+          key={index}
+          title={data.title}
+          content={<p>{data.content}</p>}
+        />
       ))}
     </section>
   );

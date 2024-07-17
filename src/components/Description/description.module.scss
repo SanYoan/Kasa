@@ -1,0 +1,150 @@
+@import "../../styles/index.scss";
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 768px) {
+        gap: 20px;
+    }
+}
+
+.topDescri {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.contentTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    width: 70%;
+
+    @media (max-width: 768px) {
+        gap: 15px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 500;
+
+    color: $color-orange;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.localisation {
+    font-size: 18px;
+    font-weight: 500;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+}
+
+.hostContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 30%;
+
+    @media (max-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 100%;
+    }
+
+}
+
+.host {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
+}
+
+
+.hostName {
+    font-size: 18px;
+    text-align: right;
+    color: $color-orange;
+    font-weight: 500;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+
+.hostPicture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    @media (max-width: 768px) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.tagsContent {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    margin-top: 10px;
+
+    @media (max-width: 768px) {
+        gap: 5px;
+    }
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    background-color: $color-orange;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+
+    @media (max-width: 768px) {
+        font-size: 10px;
+    }
+}
+
+.ratingContent {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 10px;
+    width: 100%;
+    font-size: 26px;
+
+    @media (max-width: 768px) {
+        justify-content: start;
+        gap: 8px;
+        font-size: 18px;
+    }
+}

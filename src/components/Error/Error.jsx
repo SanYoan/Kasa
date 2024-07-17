@@ -9,7 +9,11 @@ const Error = () => {
         Oups! La page que{" "}
         <span className={styles.break_text}>vous demandez n'existe pas.</span>
       </p>
-      <Link to="/" className={styles.link_error}>
+      <Link
+        to="/"
+        className={styles.link_error}
+        onClick={() => window.scrollTo(0, 0)}
+      >
         Retourner sur la page d'accueil
       </Link>
     </section>
