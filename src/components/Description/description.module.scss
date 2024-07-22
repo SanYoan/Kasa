@@ -69,7 +69,6 @@
         align-items: center;
         width: 100%;
     }
-
 }
 
 .host {
@@ -79,7 +78,6 @@
     width: 100%;
     gap: 10px;
 }
-
 
 .hostName {
     font-size: 18px;
@@ -147,4 +145,31 @@
         gap: 8px;
         font-size: 18px;
     }
+}
+
+// Description location
+
+.containerHostCollapse {
+    display: flex;
+    gap: 75px;
+    margin-top: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.containerHostCollapse.active {
+    display: block;
+    top: 0;
+    opacity: 1;
+    transition:
+        top ease 0.5s,
+        opacity ease 0.3s;
+}
+
+.equipmentIcon {
+    color: $color-orange;
+    margin-right: 10px;
 }

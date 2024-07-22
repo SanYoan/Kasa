@@ -1,7 +1,6 @@
-import React from "react";
 import PropTypes from "prop-types";
-import useCollapse from "../../utils/useCollapse";
-import styles from "../Collapse/collapse.module.scss";
+import useCollapse from "../../../utils/useCollapse";
+import styles from "../../Collapse/collapse.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 

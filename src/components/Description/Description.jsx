@@ -1,8 +1,8 @@
-import CollapseDescri from "../Collapse/CollapseDescri.jsx";
-import styles from "./description.module.scss"; // Assurez-vous que le chemin est correct
+import { Fragment } from "react";
+import styles from "./description.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { Fragment } from "react";
+import Collapse from "../Collapse/Collapse.jsx";
 
 function Description({ currentHousing }) {
   const renderStars = (rating) => {
@@ -53,11 +53,33 @@ function Description({ currentHousing }) {
             />
           </div>
           <div className={styles.ratingContent}>
-            {renderStars(parseInt(currentHousing.rating))}
+            {renderStars(parseInt(currentHousing.rating, 10))}
           </div>
         </div>
       </div>
-      <CollapseDescri datas={[currentHousing]} />
+      <div className={styles.containerHostCollapse}>
+        <Collapse
+          title="Description"
+          content={<p>{currentHousing.description}</p>}
+        />
+        <Collapse
+          title="Equipements"
+          content={
+            <ul className={styles.equipmentList}>
+              {currentHousing.equipments &&
+              currentHousing.equipments.length > 0 ? (
+                currentHousing.equipments.map((equipment, index) => (
+                  <li className={styles.equipmentItem} key={index}>
+                    {equipment}
+                  </li>
+                ))
+              ) : (
+                <li>Aucun équipement disponible.</li>
+              )}
+            </ul>
+          }
+        />
+      </div>
     </section>
   );
 }

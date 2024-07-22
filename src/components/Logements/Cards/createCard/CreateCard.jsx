@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import styles from "../Cards/cards.module.scss";
-import datas from "../../datas/logements.json";
+import styles from "../cards.module.scss";
+import datas from "../../../../datas/logements.json";
 
 const Card = ({ title, cover }) => {
   return (

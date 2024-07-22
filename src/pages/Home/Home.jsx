@@ -1,6 +1,6 @@
 import Banner from "../../components/Banner/Banner.jsx";
 import bannerImg from "../../assets/banner_home.webp";
-import CardList from "../../components/Cards/CardList.jsx";
+import Logements from "../../components/Logements/Logements.jsx";
 
 function Home() {
   return (
@@ -13,7 +13,7 @@ function Home() {
           </>
         }
       />
-      <CardList />
+      <Logements type="Cards" />
     </main>
   );
 }

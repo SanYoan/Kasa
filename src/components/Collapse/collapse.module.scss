@@ -17,6 +17,7 @@
     max-width: 1024px;
     margin: 0 auto;
     justify-content: space-between;
+    gap: 5px;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -33,7 +34,7 @@
     background-color: $color-orange;
     border: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     color: white;
     border-radius: 10px;
@@ -58,15 +59,18 @@
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.2s ease, opacity ease 0.3s;
+    transition:
+        max-height 0.2s ease,
+        opacity ease 0.3s;
 }
 
 .content.active {
     max-height: 200px;
     opacity: 1;
-    transition: max-height 0.3s ease, opacity ease 0.3s;
+    transition:
+        max-height 0.3s ease,
+        opacity ease 0.3s;
 }
-
 
 .contentCollapse {
     padding: 10px;
@@ -78,19 +82,22 @@
     position: relative;
     top: -80px;
     opacity: 0;
-    transition: top ease 0.5s, opacity ease 0.3s;
+    transition:
+        top ease 0.5s,
+        opacity ease 0.3s;
 
     @media (max-width: 768px) {
         font-size: 14px;
     }
-
 }
 
 .contentCollapse.active {
     display: block;
     top: 0;
     opacity: 1;
-    transition: top ease 0.5s, opacity ease 0.3s;
+    transition:
+        top ease 0.5s,
+        opacity ease 0.3s;
 }
 
 .containerCollapse {
@@ -119,9 +126,10 @@
     display: block;
     top: 0;
     opacity: 1;
-    transition: top ease 0.5s, opacity ease 0.3s;
+    transition:
+        top ease 0.5s,
+        opacity ease 0.3s;
 }
-
 
 .equipmentIcon {
     color: $color-orange;

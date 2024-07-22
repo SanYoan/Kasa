@@ -1,17 +1,11 @@
-import CreateCollapse from "./CreateCollapse";
+import CreateCollapse from "../Collapse/createCollapse/CreateCollapse.jsx";
 import styles from "../Collapse/collapse.module.scss";
 
-const Collapse = ({ datas }) => {
+const Collapse = ({ title, content }) => {
   return (
-    <section className={styles.container}>
-      {datas.map((data, index) => (
-        <CreateCollapse
-          key={index}
-          title={data.title}
-          content={<p>{data.content}</p>}
-        />
-      ))}
-    </section>
+    <div className={styles.container}>
+      <CreateCollapse title={title} content={content} />
+    </div>
   );
 };
 
