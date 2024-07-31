@@ -1,29 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import CreateCard from "./createCard/CreateCard";
 import styles from "../Cards/cards.module.scss";
 
 const CardList = ({ datas }) => {
   return (
-    <section className={styles.container}>
-      {datas.map((data) => (
-        <Link key={data.id} to={`/rental/${data.id}`}>
-          <CreateCard title={data.title} cover={data.cover} />
-        </Link>
-      ))}
-    </section>
+    <figure className={styles.container__card}>
+      <h2 className={styles.card__title}>{datas.title}</h2>
+      <div className={styles.degrade_img}></div>
+      <img className={styles.card__img} src={datas.cover} alt={datas.title} />
+    </figure>
   );
-};
-
-CardList.propTypes = {
-  datas: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      cover: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 
 export default CardList;

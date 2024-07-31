@@ -1,17 +1,17 @@
-import React from "react";
 import PropTypes from "prop-types";
 import CardList from "./Cards/CardList";
 import Full from "./Full/Full.jsx";
-import logementsData from "../../datas/logements.json";
+import { Link } from "react-router-dom";
 
-const Logements = ({ type, datas = logementsData }) => {
-  if (!Array.isArray(datas)) {
-    console.error("Error:", datas);
-    return null;
-  }
-
+const Logements = ({ type, datas }) => {
   if (type === "Cards") {
-    return <CardList datas={datas} />;
+    return (
+      <div>
+        <Link to={`/rental/${datas.id}`} key={datas.id}>
+          <CardList datas={datas} />
+        </Link>
+      </div>
+    );
   } else {
     return <Full datas={datas} />;
   }
@@ -19,7 +19,6 @@ const Logements = ({ type, datas = logementsData }) => {
 
 Logements.propTypes = {
   type: PropTypes.string.isRequired,
-  datas: PropTypes.array,
 };
 
 export default Logements;

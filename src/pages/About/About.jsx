@@ -10,11 +10,7 @@ function About() {
       <Banner imageUrl={Bannerimg} />
       <section className={styles.sectionCollapse}>
         {aboutDatas.map((data, index) => (
-          <Collapse
-            key={index}
-            title={data.title}
-            content={<p>{data.content}</p>}
-          />
+          <Collapse key={index} title={data.title} content={data.content} />
         ))}
       </section>
     </main>

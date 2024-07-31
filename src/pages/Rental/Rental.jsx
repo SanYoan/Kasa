@@ -1,9 +1,10 @@
 import Logements from "../../components/Logements/Logements.jsx";
+import LogementsDatas from "../../datas/logements.json";
 
 function Rental() {
   return (
     <main>
-      <Logements type="Full" />
+      <Logements datas={LogementsDatas} type="Full" />
     </main>
   );
 }

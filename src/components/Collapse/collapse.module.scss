@@ -6,7 +6,6 @@
     align-items: center;
     width: 100%;
     gap: 20px;
-    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -16,8 +15,7 @@
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    justify-content: space-between;
-    gap: 5px;
+    gap: 15px;
 
     @media (max-width: 768px) {
         width: 100%;
@@ -35,7 +33,7 @@
     border: none;
     cursor: pointer;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     color: white;
     border-radius: 10px;
     box-sizing: border-box;
@@ -73,7 +71,6 @@
 }
 
 .contentCollapse {
-    padding: 10px;
     background-color: #fff;
     border-radius: 0 0 5px 5px;
     box-sizing: border-box;
@@ -82,6 +79,7 @@
     position: relative;
     top: -80px;
     opacity: 0;
+    padding: 0px 20px 0px 20px;
     transition:
         top ease 0.5s,
         opacity ease 0.3s;
@@ -107,31 +105,4 @@
     max-width: 1024px;
     margin: 0 auto;
     justify-content: space-between;
-}
-
-// Description location
-
-.containerHostCollapse {
-    display: flex;
-    gap: 75px;
-    margin-top: 20px;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-.containerHostCollapse.active {
-    display: block;
-    top: 0;
-    opacity: 1;
-    transition:
-        top ease 0.5s,
-        opacity ease 0.3s;
-}
-
-.equipmentIcon {
-    color: $color-orange;
-    margin-right: 10px;
 }

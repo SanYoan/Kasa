@@ -58,27 +58,8 @@ function Description({ currentHousing }) {
         </div>
       </div>
       <div className={styles.containerHostCollapse}>
-        <Collapse
-          title="Description"
-          content={<p>{currentHousing.description}</p>}
-        />
-        <Collapse
-          title="Equipements"
-          content={
-            <ul className={styles.equipmentList}>
-              {currentHousing.equipments &&
-              currentHousing.equipments.length > 0 ? (
-                currentHousing.equipments.map((equipment, index) => (
-                  <li className={styles.equipmentItem} key={index}>
-                    {equipment}
-                  </li>
-                ))
-              ) : (
-                <li>Aucun équipement disponible.</li>
-              )}
-            </ul>
-          }
-        />
+        <Collapse title="Description" content={currentHousing.description} />
+        <Collapse title="Equipements" content={currentHousing.equipments} />
       </div>
     </section>
   );
