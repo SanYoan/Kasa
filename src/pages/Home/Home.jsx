@@ -5,6 +5,7 @@ import LogementsDatas from "../../datas/logements.json";
 import styles from "../../components/Logements/Cards/cards.module.scss";
 
 function Home() {
+  document.title = `Kasa - Accueil`;
   return (
     <main>
       <Banner

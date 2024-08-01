@@ -11,7 +11,7 @@ function Full({ datas }) {
   if (!currentHousing) {
     return <Navigate to="/NotFound" />;
   }
-
+  document.title = `Kasa - ${currentHousing.title}`;
   return (
     <div>
       <Carrousel

@@ -5,6 +5,7 @@ import aboutDatas from "../../datas/about.json";
 import styles from "../../components/Collapse/collapse.module.scss";
 
 function About() {
+  document.title = `Kasa - A propos`;
   return (
     <main>
       <Banner imageUrl={Bannerimg} />
